@@ -1,4 +1,5 @@
 import express from "express"
+import movieRoutes from "./routes/main.routes.js"
 
 const app = express()
 const PORT = 6969
@@ -8,29 +9,10 @@ app.get('/',(req,res) => {
 
 })
 
-//crud functionalities of movies 
-//R for reading
-app.get('/movies', () =>{
+//CRUD functionalities of Movies
 
-})
+app.use('/movies' , movieRoutes)
 
-// C - for creating movies
-app.post('/movies', () =>{
-
-})
-
-//U -Update the movies
-
-app.put('/movies/:id', () =>{
-
-})
-
-//D - Delete the movies
-
-app.delete('/movies/:id', ()=> {
-
-
-})
 app.listen(PORT, ()=>{
     console.log(`The server is running at http://localhost:${6969}`)
 })
